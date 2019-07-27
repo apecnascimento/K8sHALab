@@ -1,0 +1,18 @@
+nodes:
+  - address: 192.168.56.102    
+    user: vagrant
+    role: [controlplane,worker,etcd]
+    ssh_key_path: .vagrant/machines/m-2/virtualbox/private_key
+  - address: 192.168.56.103
+    user: vagrant
+    role: [controlplane,worker,etcd]
+    ssh_key_path: .vagrant/machines/m-2/virtualbox/private_key
+  - address: 192.168.56.104
+    user: vagrant
+    role: [controlplane,worker,etcd]
+    ssh_key_path: .vagrant/machines/m-2/virtualbox/private_key
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h
