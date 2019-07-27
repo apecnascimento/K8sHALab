@@ -1,1 +1,3 @@
 .vagrant/
+kube_config*
+rancher_*
