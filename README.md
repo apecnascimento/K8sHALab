@@ -1,7 +1,11 @@
 # K8s HA Lab
 Resources to privisonate a High Avaliable K8s cluster using Vangant and Rancher RKE. this enviroment also  can be used to get a Rancher HA.
-
+## What this will create
+This will create 4 linux virtual machines
+* m-1 is a nginx loadbalancer
+* m-2..m-4 are Ubuntu machines with docker in the latest stable version
 ## How to use
+
 * [Install RKE](https://rancher.com/docs/rke/latest/en/installation/#download-the-rke-binary) in your machine;   
 * Clone this repository:
 ```sh
@@ -26,6 +30,7 @@ This environment represents multiple VMs. The VMs are all listed
 above with their current state. For more information about a specific
 VM, run `vagrant status NAME`.
 ```
+
 * Create the k8s cluster with RKE:
 ```sh
 $ rke up --config ./rancher-cluster.yml
